@@ -1,0 +1,58 @@
+// Шапка страницы
+.page__header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+background-color:aqua;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #A1A1A1;
+    opacity: 0.5;
+    
+  }
+}
+
+.container {}
+// Навигация
+.header__nav {
+}
+
+.header__list {
+  height: 100px;
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  justify-content: end;
+}
+
+.header__item {
+}
+
+// Ссылка на страницу
+.header__link {
+  padding: 40px 0;
+
+  text-decoration: none;
+  @include font-property($primary-font,500,16px, (20 / 16));
+  color: $header-text-color;
+  &:hover,
+  &:focus{
+    color: $accent-color;
+  }
+}
+// Подчёркивание текущей сраницы
+.curent{
+  &::after{
+    content: '';
+    display: block; 
+    width: calc(100% + 40px);
+    border-bottom: 2px solid $current-devision-color;
+    transform: translate(-20px, 40px);
+  }
+}
