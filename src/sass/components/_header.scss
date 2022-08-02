@@ -39,7 +39,7 @@ width: 100vw;
   padding: 40px 0;
   @include transition-hover (color);
   text-decoration: none;
-  @include font-property($primary-font,500,16px, (20 / 16), $header-text-color);
+  @include font-property($primary-font, 500, 16px, (20 / 16), $header-text-color);
   &:hover,
   &:focus{
     color: $accent-color;
