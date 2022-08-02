@@ -1,0 +1,80 @@
+.quality {
+  padding-top: 110px;
+  padding-bottom: 105px;
+  text-align: center;
+  background-color: $background-color;
+}
+.quality__title {
+}
+// Подзаголовок
+.quality__subtitle { 
+  max-width: 730px;
+
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @include font-property($primary-font,
+    400,
+    16px,
+    (25 / 16),
+    $primary-text-color );
+}
+// Колонки
+.quality__list {
+  display: flex;
+  column-gap: 27px;
+
+  margin-top: 70px;
+}
+
+.quality__item {
+  display: flex;
+  column-gap: 17px;
+}
+// Круги вокруг иконок
+.quality__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.quality__circle--large {
+  width: 110px;
+  height: 110px;
+
+  border: 1px solid #E0E0E0;
+}
+
+.quality__circle--small {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+
+  border: 1px solid #4985FF;
+}
+
+.quality__icon {
+}
+
+.quality__description{
+  padding-top: 46px;
+  text-align: left;
+}
+// Заголовок колонки
+.quality__caption {
+$caption-color:#000000;
+  @include font-property($primary-font,600,18px,(22 / 18), $caption-color);
+}
+// Текст колонки
+.quality__text {
+  margin-top: 12px;
+  padding-left: 1px;
+  @include font-property($primary-font, 400, 14px, (22 / 14), $primary-text-color);
+}
+.quality__button{
+  margin-top: 55px;
+}
