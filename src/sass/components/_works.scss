@@ -1,0 +1,78 @@
+.works {
+  padding-top: 100px;
+  padding-bottom: 85px;
+  background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%),
+    #C4C4C4;
+  background-size: 100% 50%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: $background-color;
+}
+
+.works__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// Заголовок
+.works__title {
+  margin: 0;
+  width: 540px;
+  text-align: left;
+  color: $alternative-title-color;
+}
+// Кнопка
+.works__button {
+  width: 200px;
+  height: 45px;
+}
+// Лист с роботами
+.works__list {
+  position: relative;
+  display: grid;
+  grid-template: 1fr/repeat(3, 1fr);
+  column-gap: 30px;
+  
+  padding-top: 70px;
+  padding-bottom: 85px;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border: 1px solid #E0E0E0;
+  }
+}
+
+.works__thumb {
+
+}
+
+.works__image {
+  border-radius: 15px;
+}
+
+// Текст под картинкой
+.works__description {
+  margin-top: 30px;
+
+}
+.works__caption {
+  padding-left: 3px;
+  @include font-property ($primary-font, 600, 18px, (22 / 18), $caption-color);
+  span{
+  @include font-property ($primary-font, 600, 18px, (22 / 18), $accent-color);
+  }
+}
+// Основной текст
+.works__text{
+  margin-top: 30px; 
+  @include font-property ($primary-font, 400, 16px, (25 / 16), $primary-text-color);
+}
+// Ссылка
+.works__link {
+  margin-top: 47px;
+  display: block;
+  @include font-property ($primary-font, 500, 16px, (20 / 16), $accent-color);
+}
