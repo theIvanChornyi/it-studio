@@ -37,7 +37,7 @@ width: 100vw;
 // Ссылка на страницу
 .header__link {
   padding: 40px 0;
-
+  @include transition-hover (color);
   text-decoration: none;
   @include font-property($primary-font,500,16px, (20 / 16), $header-text-color);
   &:hover,
