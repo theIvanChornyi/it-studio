@@ -1,10 +1,14 @@
 // @import '~node_modules/modern-normalize/modern-normalize.css';
+
+// Сброс стилей
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 ul,
@@ -19,11 +23,14 @@ img {
   height: auto;
 }
 
+// Контейнер контента
 .container {
   width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
+// Кнопка
 .button {
   display: inline-block;
 
@@ -40,4 +47,10 @@ img {
   &:focus {
     background-color: #396acc;
   }
+}
+// Заголовок секций
+.section-title {
+  @include font-property ($primary-font,700, 36px, (53 / 36), $section-title-color);
+  margin: 0 auto;
+  text-align: center;
 }

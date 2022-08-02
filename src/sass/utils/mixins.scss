@@ -1,4 +1,4 @@
-@mixin font-property ($ff:$primary-font, $fw, $fz, $fh,$fc) {
+@mixin font-property ($ff, $fw, $fz, $fh,$fc) {
   font-family: $ff;
   font-weight: $fw;
   font-size: $fz;
