@@ -1,21 +1,43 @@
 // @import '~node_modules/modern-normalize/modern-normalize.css';
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
-ul,ol{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-img{
-    display: block;
-    width: 100%;
-    height: auto;
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-    width: 1140px;
-    padding: 0 15px;
-    margin: 0 auto;
+  width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
+.button {
+  display: inline-block;
 
+  padding: 14px 36px;
+
+  text-decoration: none;
+  text-align: center;
+  @include font-property ($primary-font, 500, 16px, calc(20 / 16), $button-color);
+  background: #4985ff;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  border-radius: 30px;
+  @include transition-hover (background-color);
+  &:hover,
+  &:focus {
+    background-color: #396acc;
+  }
+}

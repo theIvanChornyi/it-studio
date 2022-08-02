@@ -1,5 +1,7 @@
-@import './utils/common';
 @import './utils/vars.scss';
 @import './utils/mixins.scss';
+@import './utils/common';
 
-@import './components/header'
+
+@import './components/header';
+@import './components/hero';
