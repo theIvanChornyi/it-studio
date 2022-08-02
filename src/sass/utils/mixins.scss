@@ -1,6 +1,11 @@
-@mixin font-property ($ff, $fw, $fz, $fh) {
+@mixin font-property ($ff:$primary-font, $fw, $fz, $fh,$fc) {
   font-family: $ff;
   font-weight: $fw;
   font-size: $fz;
   line-height: $fh;
+  color: $fc;
+}
+
+@mixin transition-hover ($tp:all){
+  transition: $tp $transition-time $transition-function;
 }

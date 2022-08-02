@@ -4,7 +4,7 @@ position: absolute;
 top: 0;
 left: 0;
 width: 100vw;
-background-color:aqua;
+// background-color:aqua;
   &::after{
     content: '';
     position: absolute;
@@ -39,8 +39,7 @@ background-color:aqua;
   padding: 40px 0;
 
   text-decoration: none;
-  @include font-property($primary-font,500,16px, (20 / 16));
-  color: $header-text-color;
+  @include font-property($primary-font,500,16px, (20 / 16), $header-text-color);
   &:hover,
   &:focus{
     color: $accent-color;

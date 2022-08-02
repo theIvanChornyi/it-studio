@@ -1,0 +1,26 @@
+.hero {
+  max-width: 1920px;
+
+  margin: 0 auto;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 320px;
+  padding-bottom: 335px;
+  text-align: center;
+}
+
+.hero__title {
+  @include font-property ($primary-font, 500, 16px, calc(20 / 16), $hero-text-color);
+}
+.hero__subtitle{
+  max-width: 830px;
+  margin: 20px auto 0;
+  @include font-property ($primary-font, 800, 48px, calc(64 / 48), $hero-text-color);
+}
+.hero__button {
+  margin-top: 50px;
+  min-width: 200px;
+  height: 45px;
+}
