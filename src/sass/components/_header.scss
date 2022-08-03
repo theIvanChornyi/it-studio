@@ -17,12 +17,7 @@ width: 100vw;
     
   }
 }
-
-.container {}
 // Навигация
-.header__nav {
-}
-
 .header__list {
   height: 100px;
   display: flex;
@@ -30,10 +25,6 @@ width: 100vw;
   align-items: center;
   justify-content: end;
 }
-
-.header__item {
-}
-
 // Ссылка на страницу
 .header__link {
   padding: 40px 0;

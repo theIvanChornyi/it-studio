@@ -1,0 +1,93 @@
+// Подвал сайта
+.footer {
+  padding-top: 70px;
+  padding-bottom: 35px;
+  background-color: $alternative-background-color;
+}
+// Контейнер с колонками
+.footer__list {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+  column-gap: 40px;
+// Разделитель в футере
+  &::after{
+    content: '';
+    grid-column: 1/5;
+    height: 1px;
+
+    margin-top: 70px;
+
+    border: 1px solid #E0E0E0;
+
+  }
+}
+// Заголовок к колонкам
+.footer__title {
+  margin-bottom: 35px;
+  @include font-property ($primary-font, 600, 18px, (22 / 18), $caption-color);
+}
+// Колонка с контактами
+.contacts__list {
+  display: grid;
+  grid-template: repeat(3, 1fr)/1fr;
+  row-gap: 30px;
+  grid-auto-rows: 1fr;
+}
+// Ссылки контактов
+.contacts__link {
+  font-style: normal;
+  text-decoration: none;
+  @include font-property ($primary-font, 400, 14px, (22 / 14), $primary-text-color);
+  @include transition-hover (color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+// Иконка контактов
+.contacts__icon {
+  margin-right: 15px;
+  vertical-align:text-bottom;
+  fill: $primary-text-color;
+  @include transition-hover (fill);
+  .contacts__link:hover &,
+  .contacts__link:focus &{
+    fill: $accent-color;
+  }
+}
+// Колонки с навигацией, проектами  и соц. сетями
+.footer__sublist {
+  display: grid;
+  grid-template: repeat(3, 1fr)/1fr;
+  row-gap: 30px;
+  grid-auto-rows: 1fr;
+}
+// Ссылка в колонке  
+.footer__link {
+  font-style: normal;
+  text-decoration: none;
+  @include font-property ($primary-font, 400, 14px, (22 / 14), $primary-text-color);
+  @include transition-hover (color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+// Иконка ссылок
+.footer__icon {
+  margin-right: 10px;
+  fill: $primary-text-color;
+  @include transition-hover (fill);
+
+  .footer__link:hover &,
+  .footer__link:focus & {
+    fill: $accent-color;
+  }
+}
+// Копирайт
+.footer__copiright {
+  margin-top: 30px;
+  text-align: center;
+  @include font-property ($primary-font, 400, 13px, (21 / 13), $primary-text-color);
+}

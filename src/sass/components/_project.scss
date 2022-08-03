@@ -4,11 +4,6 @@
   background-color: $alternative-background-color;
   text-align: center;
 }
-
-.projects__title {
-
-}
-
 .projects__text {
   @include font-property ($primary-font, 400, 16px, (25 / 16), $primary-text-color);
   width: 730px;
@@ -20,13 +15,6 @@
   display: flex;
   column-gap: 30px;
 }
-
-.projects__item {
-}
-
-.projects__thumb {
-}
-
 .projects__image {
   border-radius: 15px;
 }
