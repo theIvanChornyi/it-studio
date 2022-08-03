@@ -72,22 +72,20 @@
 }
 // Иконка внутри кнопки
 .video__icon {
-  fill: #ffffff;
-  stroke: $accent-color;
-  
-  @include transition-hover (fill);
+  border-color: transparent;
+  @include transition-hover (border);
   .video__button:focus &, .video__button:hover &{
-    fill: $accent-color;
-    stroke: #ffffff;
+    border: 3px solid $accent-color;
+    border-radius: 50%;
   }
 }
 
 // Текст на кнопке
 .video__text-button{
   @include font-property ($primary-font, 400, 16px, (25 / 16), $alternative-text-color);
-  @include transition-hover (color);
+  @include transition-hover (text-shadow);
     .video__button:focus &,
       .video__button:hover & {
-        color: $accent-color;
+        text-shadow: 1px 1px 2px $accent-color;
       }
 }
