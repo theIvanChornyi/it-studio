@@ -1,0 +1,93 @@
+.video {
+  position: relative;
+  max-width: 1920px;
+
+  margin: 0 auto;
+  padding-top: 70px;
+
+  background: url('../images/video-bg.jpg'), linear-gradient(to bottom,
+   #C4C4C4 50%,
+    #ffffff 50%);
+  background-color: $background-color;
+  background-position: top 570px;
+  background-repeat: no-repeat;
+  // Разделитель вконце секции
+  &::after {
+    content: '';
+    display: block;
+    width: 1110px;
+    height: 1px;
+    margin: 85px auto 0;
+
+    border: 1px solid #E0E0E0;
+  }
+}
+// Заголовок
+.video__title {
+  color: $alternative-title-color;
+}
+// Основной текст
+.video__text {
+  text-align: center;
+  margin-top: 30px;
+  @include font-property ($primary-font, 400, 16px, (25 / 16), $alternative-text-color);
+}
+
+.video__thumb {
+  margin-top: 30px;
+  position: relative;
+}
+
+.video__image {
+
+}
+
+// Кнопка Видео
+.video__button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  column-gap: 21px;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 100px;
+
+  padding: 0;
+  
+  border: 1px solid #FFFFFF;
+  border-radius: 200px;
+
+  background: transparent;
+  cursor: pointer;
+
+  @include transition-hover (border-color);
+  &:hover, &:focus {
+    border-color: $accent-color;
+  }
+}
+// Иконка внутри кнопки
+.video__icon {
+  fill: #ffffff;
+  stroke: $accent-color;
+  
+  @include transition-hover (fill);
+  .video__button:focus &, .video__button:hover &{
+    fill: $accent-color;
+    stroke: #ffffff;
+  }
+}
+
+// Текст на кнопке
+.video__text-button{
+  @include font-property ($primary-font, 400, 16px, (25 / 16), $alternative-text-color);
+  @include transition-hover (color);
+    .video__button:focus &,
+      .video__button:hover & {
+        color: $accent-color;
+      }
+}
