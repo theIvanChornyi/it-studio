@@ -1,0 +1,62 @@
+.sign-up {
+  padding: 85px 0;
+  text-align: center;
+}
+
+.sign-up__title {
+  @include font-property($primary-font, 600, 18px, (22 / 18), $caption-color);
+}
+
+.sign-up__subtitle {
+  margin-top: 20px;
+  
+  @include font-property($primary-font, 400, 16px, (25 / 16), $primary-text-color);
+}
+
+.sign-up__form {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up__label {
+}
+
+.sign-up__input {
+  width: 300px;
+  height: 45px;
+
+  padding: 14px 33px ;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 30px;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+
+  &::placeholder{
+    @include font-property ($primary-font, 400, 13px, (21 / 13), $primary-text-color);
+  }
+}
+.sign-up__button {
+  width: 190px;
+  height: 45px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+
+  cursor: pointer;
+}
+
+.sign-up__text {
+  margin-top: 35px;
+  @include font-property ($primary-font, 400, 13px, (21 / 13), $primary-text-color);
+}
